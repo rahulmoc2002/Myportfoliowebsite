@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/652997654d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+   <div class="container">
+    <nav>
+       <h1>My Portfolio</h1>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="headertext">
+        <p>Full Stack Developer</p>
+        <h1>Hello, Im <span>Rahul Purigilla</span></h1>
+    </div>
+   </div> 
+   </div>
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <h1 class="subtitile">About Me</h1>
+                <br>
+                <p>With a solid understanding of Python and Java, I possess the skills to develop robust and efficient software solutions.
+                   As a budding full stack developer, I am passionate about creating seamless user experiences and building scalable web applications.
+                   My dedication to learning new technologies enables me to stay up-to-date with industry trends and incorporate best practices into my development projects.
+                   I thrive in collaborative environments and enjoy working with diverse teams to bring innovative ideas to life.
+                   Through my projects, I have gained experience in front-end technologies like HTML, CSS, and JavaScript, allowing me to create visually appealing and responsive websites.
+                   I am eager to leverage my programming expertise and contribute to impactful projects that drive positive change in the tech industry.</p>
+                <br>
+                <div class="tabtitles">
+                    <p class="tablinks activelink" onclick="opentab('Skills')">Skills</p>
+                    <p class="tablinks activelink" onclick="opentab('Experience')">Experience</p>
+                    <p class="tablinks activelink" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="contentintab activetab" id="Skills">
+                    <ul>
+                        <li><span>Full Stack Development</span><br>Building  Basic Web Applications</li>
+                        <li><span>Python Programming</span><br>Basic Python Programming</li>
+                    </ul>
+                </div>
+                <div class="contentintab" id="Education">
+                    <ul>
+                        <li><span>Sri Chaitanya Techno school</span><br>SSC-2018</li>
+                        <li><span>Narayana Junior College</span><br>Intermediate 2018-2020</li>
+                        <li><span>Malla Reddy College of Engineering and Technology</span><br>Btech 2020-2024</li>
+
+                    </ul>
+                </div>
+                <div class="contentintab" id="Experience">
+                    <ul>
+                        <li><span>IISC - Bengaluru</span><br>Summer School 2022</li>
+                        <li><span>ArTech Unlimited</span><br>Intern</li>
+                        <li><span>Teachnook</span><br>Project-Intern</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="serviceslist">
+            <div>
+                <i class="fa-regular fa-code-simple"></i>
+                <h2>Front End Development</h2>
+                <p>Developing responsive web pages using Html , Css and JavaScript</p>
+                <a href="">Learn More</a> 
+            </div>
+            <div>
+                <i class="fa-regular fa-code-simple"></i>
+                <h2>Software Development</h2>
+                <p>Emphasize my coding skills,especially in Python, to offer software development services</p>
+                <a href="">Learn More</a> 
+            </div>
+            
+        </div>
+    </div>
+   </div>
+   <!-- Portfolio -->
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.jpg" alt="">
+                <div class="layer">
+                    <h3>Mobile Library</h3>
+                    <p>A Mobile Application that contains various books to open read and download.</p>
+                    <a href="https://github.com/rahulmoc2002/booksh"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work2.jpg" alt="">
+                <div class="layer">
+                    <h3>Brain Tumor Detection</h3>
+                    <p>A web application that detects and finds if there is a tumor taking in an mri</p>
+                    <a href="https://github.com/rahulmoc2002/braintumordetector"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>rahul.purigilla@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9247713237</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="P.V.RAHULRESUME (1).pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Send</button>
+                </form>
+                <span id="msg">Hello</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <script>
+    var tablinks=document.getElementsByClassName("tablinks");
+    var tabcontents=document.getElementsByClassName("contentintab");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("activelink");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("activetab");
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("activetab");
+    }
+   </script>
+   <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEw2Xp8WL00iR8lDS3bQeKLT_a9SlehrLT4wvrsTRqqzQPAQ3hbQIYo_SmvB2ckqwylA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Received Message! ThankYou"
+            setTimeout(function()
+            {
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body> 
+</html>
